@@ -10,6 +10,7 @@
 #import "ViewController.h"
 #import "CollectionViewCell.h"
 #import "Math.h"
+#import "UIView+Custom.h"
 
 static NSString *kCellIdentifier = @"UICollectionViewCell";
 
@@ -43,6 +44,8 @@ static NSString *kCellIdentifier = @"UICollectionViewCell";
     layout.cellStyle = CellStyleFixed;
     layout.sectionStyle = SectionStyleSingleRing;
     [self.collectionView setCollectionViewLayout:layout];
+    
+    [self.button round];
 }
 
 - (IBAction)button:(id)sender {
@@ -54,6 +57,7 @@ static NSString *kCellIdentifier = @"UICollectionViewCell";
         [self withdrawItems];
         [self.button setTitle:@"+" forState:UIControlStateNormal];
     }
+    [self.button highlight];
     menuOpen = !menuOpen;
 }
 
@@ -72,12 +76,7 @@ static NSString *kCellIdentifier = @"UICollectionViewCell";
         
         [[collectionData objectAtIndex:0] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
             CollectionViewCell *cell = (CollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]];
-            
-            [UIView animateWithDuration:0.2 animations:^{
-                cell.transform = CGAffineTransformMakeScale(1.1, 1.1);
-            } completion:^(BOOL finished) {
-                cell.transform = CGAffineTransformIdentity;
-            }];
+            [cell popUpThenDown];
         }];
     }];
 }
@@ -101,22 +100,15 @@ static NSString *kCellIdentifier = @"UICollectionViewCell";
 
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
     CollectionViewCell *cell = (CollectionViewCell *)[collectionView cellForItemAtIndexPath:indexPath];
-    [self highlightView:cell];
-}
-
-- (void)highlightView:(UIView *)view {
-    view.backgroundColor = [UIColor whiteColor];
-    [UIView animateWithDuration:0.5 animations:^{
-        view.backgroundColor = [UIColor clearColor];
-    }];
+    [cell popDownThenUp];
+    [cell highlight];
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
     CollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kCellIdentifier forIndexPath:indexPath];
     cell.image.image = [UIImage imageNamed:[images objectAtIndex:indexPath.row]];
-    cell.layer.masksToBounds = YES;
-    cell.layer.cornerRadius = cell.frame.size.height/2;
+    [cell round];
     cell.layer.borderColor = [UIColor whiteColor].CGColor;
     cell.layer.borderWidth = 1.0f;
     return cell;

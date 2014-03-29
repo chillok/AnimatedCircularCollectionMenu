@@ -222,7 +222,7 @@
     
     if ([self.insertedSet containsObject:@(itemIndexPath.item)]) {
         attributes.alpha = 0;
-        attributes.size = CGSizeMake(0, 0);
+        attributes.transform = CGAffineTransformMakeScale(0, 0);
         attributes.center = self.centerPoint;
         return attributes;
     }
@@ -235,7 +235,7 @@
     if ([self.deletedSet containsObject:@(itemIndexPath.item)]) {
         
         attributes.alpha = 0;
-        attributes.size = CGSizeMake(0, 0);
+        attributes.transform = CGAffineTransformMakeScale(0, 0);
         attributes.center = self.centerPoint;
         return attributes;
     }

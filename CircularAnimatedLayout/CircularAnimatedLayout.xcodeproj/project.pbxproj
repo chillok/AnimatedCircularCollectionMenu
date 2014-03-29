@@ -25,6 +25,7 @@
 		691725AD18E6FCA300FD1F15 /* Math.m in Sources */ = {isa = PBXBuildFile; fileRef = 691725AA18E6FCA300FD1F15 /* Math.m */; };
 		691725AE18E6FCA300FD1F15 /* PointObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 691725AC18E6FCA300FD1F15 /* PointObj.m */; };
 		691725B118E725BC00FD1F15 /* CollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 691725B018E725BC00FD1F15 /* CollectionViewCell.m */; };
+		691725B518E75BD900FD1F15 /* UIView+Custom.m in Sources */ = {isa = PBXBuildFile; fileRef = 691725B418E75BD900FD1F15 /* UIView+Custom.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +66,8 @@
 		691725AC18E6FCA300FD1F15 /* PointObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PointObj.m; sourceTree = "<group>"; };
 		691725AF18E725BC00FD1F15 /* CollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionViewCell.h; sourceTree = "<group>"; };
 		691725B018E725BC00FD1F15 /* CollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionViewCell.m; sourceTree = "<group>"; };
+		691725B318E75BD900FD1F15 /* UIView+Custom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Custom.h"; sourceTree = "<group>"; };
+		691725B418E75BD900FD1F15 /* UIView+Custom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Custom.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,7 @@
 				6917257B18E6F5C000FD1F15 /* AppDelegate.m */,
 				6917257D18E6F5C000FD1F15 /* Main.storyboard */,
 				6917258318E6F5C000FD1F15 /* Images.xcassets */,
+				691725B218E75BC400FD1F15 /* Categories */,
 				691725A818E6FC9C00FD1F15 /* Utilities */,
 				691725A418E6F72200FD1F15 /* Collection Elements */,
 				691725A018E6F5E700FD1F15 /* View Controllers */,
@@ -194,6 +198,15 @@
 				691725AC18E6FCA300FD1F15 /* PointObj.m */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		691725B218E75BC400FD1F15 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				691725B318E75BD900FD1F15 /* UIView+Custom.h */,
+				691725B418E75BD900FD1F15 /* UIView+Custom.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				691725AE18E6FCA300FD1F15 /* PointObj.m in Sources */,
+				691725B518E75BD900FD1F15 /* UIView+Custom.m in Sources */,
 				691725AD18E6FCA300FD1F15 /* Math.m in Sources */,
 				691725A318E6F5FA00FD1F15 /* ViewController.m in Sources */,
 				691725A718E6FBE300FD1F15 /* CHCircularCollectionLayout.m in Sources */,
