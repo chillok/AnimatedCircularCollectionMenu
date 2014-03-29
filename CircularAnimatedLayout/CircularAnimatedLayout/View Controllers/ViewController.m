@@ -9,6 +9,7 @@
 #import "CHCircularCollectionLayout.h"
 #import "ViewController.h"
 #import "CollectionViewCell.h"
+#import "Math.h"
 
 static NSString *kCellIdentifier = @"UICollectionViewCell";
 
@@ -67,7 +68,18 @@ static NSString *kCellIdentifier = @"UICollectionViewCell";
             countFrom++;
         }
         [self.collectionView insertItemsAtIndexPaths:[NSArray arrayWithArray:mutableArray]];
-    } completion:nil];
+    } completion:^(BOOL finished) {
+        
+        [[collectionData objectAtIndex:0] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+            CollectionViewCell *cell = (CollectionViewCell *)[self.collectionView cellForItemAtIndexPath:[NSIndexPath indexPathForRow:idx inSection:0]];
+            
+            [UIView animateWithDuration:0.2 animations:^{
+                cell.transform = CGAffineTransformMakeScale(1.1, 1.1);
+            } completion:^(BOOL finished) {
+                cell.transform = CGAffineTransformIdentity;
+            }];
+        }];
+    }];
 }
 
 - (void)withdrawItems {

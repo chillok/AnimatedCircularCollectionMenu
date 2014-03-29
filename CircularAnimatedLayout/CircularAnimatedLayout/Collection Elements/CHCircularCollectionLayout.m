@@ -221,7 +221,6 @@
     UICollectionViewLayoutAttributes *attributes = [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:itemIndexPath];
     
     if ([self.insertedSet containsObject:@(itemIndexPath.item)]) {
-    
         attributes.alpha = 0;
         attributes.size = CGSizeMake(0, 0);
         attributes.center = self.centerPoint;

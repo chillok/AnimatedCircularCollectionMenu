@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CircularAnimatedLayout/View Controllers/ViewController.m"
-            timestampString = "417802487.132805"
+            timestampString = "417805537.382989"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "39"
-            endingLineNumber = "39"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
             landmarkName = "-setup"
             landmarkType = "5">
          </BreakpointContent>
@@ -26,7 +26,23 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CircularAnimatedLayout/Collection Elements/CHCircularCollectionLayout.m"
-            timestampString = "417801019.92932"
+            timestampString = "417805465.909333"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "-initialLayoutAttributesForAppearingItemAtIndexPath:"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CircularAnimatedLayout/Collection Elements/CHCircularCollectionLayout.m"
+            timestampString = "417805465.909333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "224"
@@ -42,12 +58,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CircularAnimatedLayout/Collection Elements/CHCircularCollectionLayout.m"
-            timestampString = "417801019.92932"
+            timestampString = "417805465.909333"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "225"
-            endingLineNumber = "225"
-            landmarkName = "-initialLayoutAttributesForAppearingItemAtIndexPath:"
+            startingLineNumber = "252"
+            endingLineNumber = "252"
+            landmarkName = "-prepareForCollectionViewUpdates:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -57,13 +73,13 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CircularAnimatedLayout/Collection Elements/CHCircularCollectionLayout.m"
-            timestampString = "417801136.744294"
+            filePath = "CircularAnimatedLayout/View Controllers/ViewController.m"
+            timestampString = "417805806.260373"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "253"
-            endingLineNumber = "253"
-            landmarkName = "-prepareForCollectionViewUpdates:"
+            startingLineNumber = "74"
+            endingLineNumber = "74"
+            landmarkName = "-insertItems"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
